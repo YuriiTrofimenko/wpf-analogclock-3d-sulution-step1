@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Wpf3DCubeWindow.AnalogClock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Loaded="Window_Loaded"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UniformGrid x:Name="canvasWindow" SizeChanged="canvasWindow_SizeChanged">
+        <UniformGrid.Background>
+            <ImageBrush ImageSource="Image/watches.png"></ImageBrush>
+        </UniformGrid.Background>
+        <Canvas>
+            <Line
+            Name="secondArrow"
+            X1="217" Y1="70"
+            X2="217" Y2="219"
+            Stroke="Red"
+            StrokeThickness="3">
+                <Line.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform CenterX="0.5"></SkewTransform>
+                        <RotateTransform CenterX="218" CenterY="219"></RotateTransform>
+                    </TransformGroup>
+                </Line.RenderTransform>
+            </Line>
+
+            <Line
+            Name="minuteArrow"
+            X1="217" Y1="70"
+            X2="217" Y2="219"
+            Stroke="BlanchedAlmond"
+            
+                
+            StrokeThickness="4">
+                <Line.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform CenterX="0.5"></SkewTransform>
+                        <RotateTransform CenterX="218" CenterY="219"></RotateTransform>
+                    </TransformGroup>
+                </Line.RenderTransform>
+            </Line>
+            <Line
+            Name="hoursArrow"
+            X1="217" Y1="100"
+            X2="217" Y2="219"
+            Stroke="BlanchedAlmond"
+            StrokeThickness="6">
+                <Line.RenderTransform>
+                    <TransformGroup>
+                        <SkewTransform CenterX="0.5"></SkewTransform>
+                        <RotateTransform CenterX="218" CenterY="219"></RotateTransform>
+                    </TransformGroup>
+                </Line.RenderTransform>
+            </Line>
+        </Canvas>
+    </UniformGrid>
+</UserControl>
